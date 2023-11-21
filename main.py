@@ -7,7 +7,7 @@ import time
 import pandas as pd
 
 # Caminho para o seu arquivo Excel (xlsx)
-caminho_planilha = 'contatos.xlsx'
+caminho_planilha = 'dados.xlsx'
 
 # Carregar a planilha
 planilha = pd.read_excel(caminho_planilha)
@@ -27,7 +27,7 @@ while True:
         nome_pesquisar = linha['Nome']
 
         # Extrair o código a ser enviado
-        codigo_a_enviar = str(linha['Codigo'])
+        codigo_a_enviar = str(linha['Texto'])
 
         # Pesquisar o contato pelo nome
         campo_pesquisa = WebDriverWait(driver, 10).until(
